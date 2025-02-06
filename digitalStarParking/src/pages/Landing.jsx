@@ -1,9 +1,13 @@
 import "../styles/Home.css";
 import heroImage from "../images/llanding.jpg";
+import Header from '../components/Header.jsx'
+import Reservation from '../pages/Reservation.jsx'
 
 const Landing = () => {
   return (
+    <section>
     <section className="landing-page">
+      <Header/>
       <div className="left-hero-section">
         <h1>
           Seamless Parking at Your Fingertips – <br />
@@ -13,6 +17,8 @@ const Landing = () => {
       <div className="right-hero-section">
         <img src={heroImage} />
       </div>
+    </section>
+    <Reservation/>
     </section>
   );
 };

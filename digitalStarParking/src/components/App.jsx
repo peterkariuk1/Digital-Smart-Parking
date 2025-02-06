@@ -6,6 +6,7 @@ import Login from "../pages/Login.jsx";
 import SignUp from "../pages/SignUp.jsx";
 import Landing from "../pages/Landing.jsx";
 import ProtectedRoute from "../components/ProtectedRoute.jsx";
+
 import { Route, Routes } from "react-router-dom";
 import { useAuth } from "./AuthContext";
 
