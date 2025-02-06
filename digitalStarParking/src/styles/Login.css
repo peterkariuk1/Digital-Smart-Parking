@@ -1,10 +1,10 @@
 :root {
-  --primary-color: #0000;
+  --primary-color: #000014;
   --secondary-color: #f3f3f3;
-  --tertiary-color: #0014ff;
-  --sec-2-color: #ff2cdf;
+  --tertiary-color: #4876ff;
+  --tertiary-2-color: #4876ff;
+  --sec-2-color: #fc72ff;
 }
-
 .login-page {
   display: flex;
   height: 100vh;
