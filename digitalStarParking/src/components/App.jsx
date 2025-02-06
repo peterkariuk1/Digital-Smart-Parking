@@ -7,23 +7,28 @@ import SignUp from "../pages/SignUp.jsx";
 import Landing from "../pages/Landing.jsx";
 import ProtectedRoute from "../components/ProtectedRoute.jsx";
 import { Route, Routes } from "react-router-dom";
+import { useAuth } from "./AuthContext";
 
 const App = () => {
+  const { user } = useAuth(); // Get the logged-in user
+
   return (
     <>
       <Routes>
         <Route path="/" element={<Login />} />
         <Route path="/login" element={<Login />} />
         <Route path="/sign-up" element={<SignUp />} />
-        {/* Protected routes */}
-        <Route
-          path="/landing"
-          element={
-            <ProtectedRoute>
-              <Landing />
-            </ProtectedRoute>
-          }
-        />
+        {/* Check if user exists before setting dynamic route */}
+        {user && (
+          <Route
+            path={`/${user.uid}/home`}
+            element={
+              <ProtectedRoute>
+                <Landing />
+              </ProtectedRoute>
+            }
+          />
+        )}
       </Routes>
     </>
   );

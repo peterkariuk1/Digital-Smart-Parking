@@ -1,16 +1,12 @@
 const Landing = () => {
   return (
-    <div>
-      <h1> Hellos</h1>
-      <h1> Hellos</h1>
-      <h1> Hellos</h1>
-      <h1> Hellos</h1>
-      <h1> Hellos</h1>
-      <h1> Hellos</h1>
-      <h1> Hellos</h1>
-      <h1> Hellos</h1>
-      <h1> Hellos</h1>
-    </div>
+    <section className="landing-page">
+      <h1>HELLO</h1>
+      <h1>HELLO</h1>
+      <h1>HELLO</h1>
+      <h1>HELLO</h1>
+      <h1>HELLO</h1>
+    </section>
   );
 };
 

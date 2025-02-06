@@ -11,6 +11,7 @@ const SignUp = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const navigate = useNavigate();
+  
 
   const handleSignup = async () => {
     try {
@@ -24,9 +25,11 @@ const SignUp = () => {
 
       // Save user info with a default role in Firestore
       await setDoc(doc(db, "users", user.uid), { email, role: "user" });
+  
+       
 
       alert("Signup successful!");
-      navigate("/landing");
+      navigate(`/${user.uid}/home`);
     } catch (error) {
       console.error("Signup error:", error);
       alert("Error during signup: " + error.message);

@@ -8,31 +8,35 @@ import starIcon from "../images/star.png";
 import rightSVG from "../images/undraw_profile_details_re_ch9r.svg";
 
 const Login = () => {
-    const [email, setEmail] = useState("");
-    const [password, setPassword] = useState("");
-    const navigate = useNavigate();
-  
-    const handleLogin = async () => {
-      try {
-        // Attempt to sign in the user
-        const userCredential = await signInWithEmailAndPassword(auth, email, password);
-        const user = userCredential.user;
-        
-        // Retrieve user details (e.g., role) from Firestore
-        const userDoc = await getDoc(doc(db, "users", user.uid));
-        const userData = userDoc.data();
-  
-        // Redirect based on role
-        if (userData.role === "admin") {
-          navigate("/admin");
-        } else {
-          navigate("/landing");
-        }
-      } catch (error) {
-        console.log("Login error:", error);
-        alert("Error during login: " + error.message);
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+  const navigate = useNavigate();
+
+  const handleLogin = async () => {
+    try {
+      // Attempt to sign in the user
+      const userCredential = await signInWithEmailAndPassword(
+        auth,
+        email,
+        password
+      );
+      const user = userCredential.user;
+
+      // Retrieve user details (e.g., role) from Firestore
+      const userDoc = await getDoc(doc(db, "users", user.uid));
+      const userData = userDoc.data();
+
+      // Redirect based on role
+      if (userData.role === "admin") {
+        navigate("/admin");
+      } else {
+        navigate(`/${user.uid}/home`);
       }
-    };
+    } catch (error) {
+      console.log("Login error:", error);
+      alert("Error during login: " + error.message);
+    }
+  };
   return (
     <div className="login-page">
       <div className="left-section">
