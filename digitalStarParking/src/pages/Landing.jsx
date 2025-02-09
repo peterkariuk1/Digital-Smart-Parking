@@ -1,7 +1,6 @@
 import "../styles/Home.css";
 import heroImage from "../images/llanding.jpg";
 import Header from '../components/Header.jsx'
-import Reservation from '../pages/Reservation.jsx'
 
 const Landing = () => {
   return (
@@ -18,7 +17,7 @@ const Landing = () => {
         <img src={heroImage} />
       </div>
     </section>
-    <Reservation/>
+    {/* <Reservation/> */}
     </section>
   );
 };
