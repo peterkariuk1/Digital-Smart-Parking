@@ -1,0 +1,257 @@
+:root {
+  --primary-color: #000014;
+  --secondary-color: #f3f3f3;
+  --tertiary-color: #4876ff;
+  --tertiary-2-color: #4876ff;
+  --sec-2-color: #fc72ff;
+}
+
+/* Styles for the header component */
+nav {
+  position: fixed;
+  display: flex;
+  padding: 0px 90px 0px 30px;
+  align-items: center;
+  justify-content: space-between;
+  top: 0;
+  left: 180px;
+  right: 180px;
+  height: 65px;
+  background-color: var(--primary-color);
+  /* border-bottom: 1px solid #4876ff; */
+  box-shadow: 1px 2px 8px #4876ff39;
+}
+nav .left p {
+  color: #fcaa32;
+  text-align: center;
+}
+nav .right p:hover {
+  border-bottom: 1.2px solid #8f68ff;
+  cursor: pointer;
+}
+
+nav .left img {
+  width: 22px;
+  margin: 20px 6px 0px 6px;
+}
+nav .right {
+  display: flex;
+  align-items: center;
+  column-gap: 30px;
+  color: var(--secondary-color);
+}
+
+.landing-page {
+  display: flex;
+  /* flex-direction: column; */
+  position: relative;
+  background-color: var(--primary-color);
+  height: 80vh;
+  width: 100%;
+  /* color:var(--sec-2-color); */
+}
+.left-hero-section {
+  width: 60%;
+  display: flex;
+
+  justify-content: center;
+}
+@keyframes gradientSlide {
+  30% {
+    background-position: 110%;
+  }
+  60% {
+    background-position: -130%;
+  }
+  100% {
+    background-position: 130%;
+  }
+}
+.left-hero-section h1 {
+  margin: 20vh 0px 10px 40px;
+  font-size: 52px;
+  font-family: Orbitron;
+  font-weight: 800;
+  background: linear-gradient(to right, #fc72ff, #8f68ff, #4876ff, #8f68ff);
+  background-size: 200%;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: 12.2s alternate-reverse infinite gradientSlide;
+}
+.left-hero-section h1 span {
+  font-size: 22px;
+  background: var(--secondary-color);
+  background-size: 200%;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.right-hero-section {
+  width: 38%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.right-hero-section img {
+  width: 330px;
+  border-radius: 15px;
+}
+/* Styles for the reservation section */
+
+.reservation-section {
+  /* padding: 30px 30px 10px 30px; */
+  width: 100%;
+  background-color: #cae5ff;
+  background-image: linear-gradient(62deg, #e2f1ff 0%, #f0e0ff 100%);
+}
+.reservation-section .top h1 {
+  color: var(--primary-color);
+  margin: 0;
+  display: flex;
+  justify-self: center;
+  font-size: 43px;
+  padding-top: 20px;
+}
+.reservation-section .top div {
+  display: flex;
+  margin-top: 30px;
+  position: relative;
+}
+.reservation-section .top h2 {
+  font-family: "Orbitron";
+}
+.reservation-section .top h2 img {
+  width: 30px;
+  height: 30px;
+  margin: 26px 0px 0px 13px;
+}
+.step-1,
+.step-2,
+.step-3 {
+  display: flex;
+  flex-direction: column;
+  border-radius: 15px;
+  padding: 40px;
+  box-shadow: 1px 1.5px 5px #00001461;
+  transition: 0.2s ease-in-out transform;
+}
+.step-1:hover,
+.step-2:hover,
+.step-3:hover {
+  transform: scale(1.03);
+  cursor: pointer;
+}
+
+.right-arrow-1 {
+  position: absolute;
+  width: 40px;
+  left: 410px;
+  top: 100px;
+}
+.right-arrow-2 {
+  position: absolute;
+  width: 40px;
+  left: 800px;
+  top: 100px;
+}
+.step-1,
+.step-3 {
+  margin: 40px 100px 10px 100px;
+}
+.step-2 {
+  margin: 40px 10px 10px 10px;
+}
+.step-1 p,
+.step-2 p,
+.step-3 p {
+  width: 200px;
+  margin: 0;
+}
+
+/* Why Choose Us Section */
+.wcu-container {
+  margin-top: 30px;
+  padding-top: 30px;
+  
+}
+
+.wcu-title-container {
+  display: flex;
+  justify-content: end;
+  border-top-left-radius: 10px;
+  width: 70vw;
+  margin-left: 30vw;
+  background-color: var(--primary-color);
+}
+.wcu-title-container h1 {
+  font-size: 45px;
+  margin-right: 100px;
+  font-family: Orbitron;
+  font-weight: 800;
+  background: linear-gradient(to right,#8f68ff, #fc72ff, #8258fe, #4876ff, #8f68ff,#8f68ff);
+  background-size: 200%;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: 16.2s alternate-reverse infinite gradientSlide;
+}
+
+.wcu-content-container {
+  display: flex;
+  padding-bottom:0px;
+
+}
+.wcu-content-container .left {
+  width: 30vw;
+  background-color: #cae5ff;
+  background-image: linear-gradient(62deg, #eff6fd 0%, #f5eaff 100%);
+  padding-bottom: 60px;
+
+}
+.wcu-content-container .right {
+  width: 70vw;
+  background-color: var(--primary-color);
+  padding-bottom: 60px;
+}
+.wcu-content-container .right div{
+  display:flex;
+  flex-direction: column;
+  row-gap:20px ;
+}
+.wcu-item-container{
+  margin-top: 1px;
+}
+.checkmark-container img{
+  width: 30px;
+  height: 30px;
+}
+.checkmark-container{
+  background-color: #cae5ff;
+  background-image: linear-gradient(62deg, #e2f1ff 0%, #f0e0ff 100%);
+  width: 50px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius:50%;
+  position: absolute;
+  left: 360px;
+}
+.wcu-item-text-container{
+  background-color: #cae5ff;
+  background-image: linear-gradient(62deg, #e2f1ff 0%, #f0e0ff 100%);
+  width:35vw;
+  margin-left: 40px;
+  border-radius: 40px;
+  position: relative;
+  color: var(--primary-color);
+  font-size: 20px;
+}
+.wcu-item-text-container p{
+  margin: 15px;
+}
+
+
+
+
