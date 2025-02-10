@@ -38,14 +38,14 @@ const AdminDashboard = () => {
   };
   return (
     <div className="admin-dashboard">
-      <h2>Admin Dashboard: User Subscriptions</h2>
+      <h2>Admin Dashboard:<br/> User Subscriptions</h2>
       {subscriptions.length === 0 ? (
         <p>No subscriptions found.</p>
       ) : (
-        <table>
+        <table className="users-table">
           <thead>
             <tr>
-            <th>User ID</th>
+              <th>User ID</th>
               <th>Plan</th>
               <th>Amount</th>
               <th>Expiry</th>
@@ -57,7 +57,7 @@ const AdminDashboard = () => {
           <tbody>
             {subscriptions.map((sub) => {
               const timeRemaining = formatTimeRemaining(sub.expiry);
-              const isLapsed = timeRemaining === "Plan Lapsed";
+              // const isLapsed = timeRemaining === "Plan Lapsed";
               return (
                 <tr key={sub.id}>
                   <td>{sub.userId}</td>
@@ -71,11 +71,11 @@ const AdminDashboard = () => {
                   <td>{timeRemaining}</td>
                   <td>{sub.status}</td>
                   <td>
-                    {isLapsed && (
+                    
                       <button onClick={() => sendReminder(sub)}>
                         Send Reminder
                       </button>
-                    )}
+                   
                   </td>
                 </tr>
               );
