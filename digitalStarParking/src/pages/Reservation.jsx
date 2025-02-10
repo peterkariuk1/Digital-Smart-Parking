@@ -4,6 +4,7 @@ import ReserveIcon from "../images/reserve.png";
 import ParkIcon from "../images/park.png";
 import WhyChooseUs from "../components/WhyChooseUs.jsx";
 import PricingPlan from "../components/PricingPlan.jsx";
+import Testimonials from "../components/Testimonials.jsx";
 
 const Reservation = () => {
   return (
@@ -41,6 +42,7 @@ const Reservation = () => {
       </div>
       <WhyChooseUs />
       <PricingPlan />
+      <Testimonials />
     </div>
   );
 };

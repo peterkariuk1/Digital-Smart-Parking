@@ -28,7 +28,7 @@ const Login = () => {
 
       // Redirect based on role
       if (userData.role === "admin") {
-        navigate("/admin");
+        navigate(`/${user.uid}/admin`)
       } else {
         navigate(`/${user.uid}/home`);
       }
