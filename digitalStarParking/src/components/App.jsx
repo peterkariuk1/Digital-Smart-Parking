@@ -11,6 +11,7 @@ import ProtectedRoute from "../components/ProtectedRoute.jsx";
 
 import { Route, Routes } from "react-router-dom";
 import { useAuth } from "./AuthContext";
+import AdminDashboard from "../pages/AdminDashboard.jsx";
 
 const App = () => {
   const { user } = useAuth();
@@ -33,6 +34,7 @@ const App = () => {
           />
         )}
         {user && <Route path={`/${user.uid}/contact`} element={<Contact />} />}
+        {user && <Route path={`/${user.uid}/admin`} element={<AdminDashboard />} />}
       </Routes>
     </>
   );

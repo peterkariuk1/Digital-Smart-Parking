@@ -29,9 +29,9 @@ const Header = () => {
         </Link>
         <Link
           style={{ textDecoration: "none", color: "#f3f3f3" }}
-          to={`/${user.uid}/contact`}
+          to={`/login`}
         >
-          Contact Us
+          Login
         </Link>
       </div>
     </nav>
