@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { auth, db } from "../firebase.js";
 import { addDoc, collection, serverTimestamp } from "firebase/firestore";
+import { Link } from "react-router-dom";
 import tickLightIcon from "../images/done.png";
 import xIcon from "../images/multiply.png";
 import tickIcon from "../images/done[1].png";
@@ -10,10 +11,7 @@ import whatsappLogo from "../images/wappLogo.png";
 const PricingPlan = () => {
   const [message, setMessage] = useState("");
 
-  // This function simulates payment processing, records the subscription,
-  // and simulates sending an onboarding email.
   const handlePlanPayment = async (plan) => {
-    // Warn the user that no refunds are possible
     const confirmed = window.confirm(
       "After payment, no refunds can happen. Do you wish to continue?"
     );
@@ -33,7 +31,6 @@ const PricingPlan = () => {
         expiryDate = new Date(Date.now() + 30 * 24 * 60 * 60 * 1000); // 30 days from now
       }
 
-      // Simulate payment success (here we assume it always succeeds)
       const subscriptionData = {
         userId: user.uid,
         userEmail: user.email,
@@ -44,10 +41,8 @@ const PricingPlan = () => {
         status: "active",
       };
 
-      // Record the subscription in Firestore (collection: "subscriptions")
       await addDoc(collection(db, "subscriptions"), subscriptionData);
 
-      // Simulate sending an onboarding email by logging to the console
       console.log(
         `Onboarding email sent to ${user.email} for plan ${plan.title}`
       );
@@ -80,9 +75,15 @@ const PricingPlan = () => {
             >
               Get Started
             </button>
-            <button className="chat-button">
-              <img src={whatsappLogo} /> Get Assisted
-            </button>
+            <Link
+              style={{ textDecoration: "none" }}
+              to="https://wa.me/254112529019"
+              target="_blank"
+            >
+              <button className="chat-button">
+                <img src={whatsappLogo} /> Get Assisted
+              </button>
+            </Link>
           </div>
           <div className="bottom">
             <h1>Features</h1>
@@ -124,9 +125,15 @@ const PricingPlan = () => {
             >
               Get Started
             </button>
-            <button className="chat--button">
-              <img src={whatsappLogo} /> Get Assisted
-            </button>
+            <Link
+              style={{ textDecoration: "none" }}
+              to="https://wa.me/254112529019"
+              target="_blank"
+            >
+              <button className="chat--button">
+                <img src={whatsappLogo} /> Get Assisted
+              </button>
+            </Link>
           </div>
           <div className="bottom">
             <h1>Features</h1>
@@ -168,9 +175,15 @@ const PricingPlan = () => {
             >
               Get Started
             </button>
-            <button className="chat-button">
-              <img src={whatsappLogo} /> Get Assisted
-            </button>
+            <Link
+              style={{ textDecoration: "none" }}
+              to="https://wa.me/254112529019"
+              target="_blank"
+            >
+              <button className="chat-button">
+                <img src={whatsappLogo} /> Get Assisted
+              </button>
+            </Link>
           </div>
           <div className="bottom">
             <h1>Features</h1>
