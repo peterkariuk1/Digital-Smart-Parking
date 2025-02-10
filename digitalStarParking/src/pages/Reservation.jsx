@@ -2,7 +2,8 @@ import RightArrow from "../images/right-arrow.png";
 import PayIcon from "../images/pay.png";
 import ReserveIcon from "../images/reserve.png";
 import ParkIcon from "../images/park.png";
-import WhyChooseUs from '../components/WhyChooseUs.jsx';
+import WhyChooseUs from "../components/WhyChooseUs.jsx";
+import PricingPlan from "../components/PricingPlan.jsx";
 
 const Reservation = () => {
   return (
@@ -38,7 +39,8 @@ const Reservation = () => {
           </div>
         </div>
       </div>
-      <WhyChooseUs/>
+      <WhyChooseUs />
+      <PricingPlan />
     </div>
   );
 };

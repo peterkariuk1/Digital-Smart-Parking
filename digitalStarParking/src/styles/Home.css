@@ -9,6 +9,7 @@
 /* Styles for the header component */
 nav {
   position: fixed;
+  z-index: 3;
   display: flex;
   padding: 0px 90px 0px 30px;
   align-items: center;
@@ -173,7 +174,6 @@ nav .right {
 .wcu-container {
   margin-top: 30px;
   padding-top: 30px;
-  
 }
 
 .wcu-title-container {
@@ -189,7 +189,15 @@ nav .right {
   margin-right: 100px;
   font-family: Orbitron;
   font-weight: 800;
-  background: linear-gradient(to right,#8f68ff, #fc72ff, #8258fe, #4876ff, #8f68ff,#8f68ff);
+  background: linear-gradient(
+    to right,
+    #8f68ff,
+    #fc72ff,
+    #8258fe,
+    #4876ff,
+    #8f68ff,
+    #8f68ff
+  );
   background-size: 200%;
   background-clip: text;
   -webkit-background-clip: text;
@@ -199,34 +207,32 @@ nav .right {
 
 .wcu-content-container {
   display: flex;
-  padding-bottom:0px;
-
+  padding-bottom: 0px;
 }
 .wcu-content-container .left {
   width: 30vw;
   background-color: #cae5ff;
   background-image: linear-gradient(62deg, #eff6fd 0%, #f5eaff 100%);
   padding-bottom: 60px;
-
 }
 .wcu-content-container .right {
   width: 70vw;
   background-color: var(--primary-color);
   padding-bottom: 60px;
 }
-.wcu-content-container .right div{
-  display:flex;
+.wcu-content-container .right div {
+  display: flex;
   flex-direction: column;
-  row-gap:20px ;
+  row-gap: 20px;
 }
-.wcu-item-container{
+.wcu-item-container {
   margin-top: 1px;
 }
-.checkmark-container img{
+.checkmark-container img {
   width: 30px;
   height: 30px;
 }
-.checkmark-container{
+.checkmark-container {
   background-color: #cae5ff;
   background-image: linear-gradient(62deg, #e2f1ff 0%, #f0e0ff 100%);
   width: 50px;
@@ -234,24 +240,147 @@ nav .right {
   display: flex;
   align-items: center;
   justify-content: center;
-  border-radius:50%;
+  border-radius: 50%;
   position: absolute;
   left: 360px;
 }
-.wcu-item-text-container{
+.wcu-item-text-container {
   background-color: #cae5ff;
   background-image: linear-gradient(62deg, #e2f1ff 0%, #f0e0ff 100%);
-  width:35vw;
+  width: 35vw;
   margin-left: 40px;
   border-radius: 40px;
   position: relative;
   color: var(--primary-color);
   font-size: 20px;
 }
-.wcu-item-text-container p{
+.wcu-item-text-container p {
   margin: 15px;
 }
 
+/* Styles for the pricing plans component */
+.pricing-plans-container {
+  display: flex;
+  justify-content: center;
+  column-gap: 20px;
+  padding-bottom: 50px;
+}
+.daily-pass-container,
+.monthly-pass-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 24px;
+  box-shadow: 1px 2px 4px #00001442;
+  padding: 10px 18px;
+  width: 23vw;
+}
+.monthly-pass-container {
+  background-color: var(--primary-color);
+  color: #cae5ff;
+}
+.pricing-plan-component h1 {
+  text-align: center;
+  font-size: 48px;
+}
 
+.daily-pass-container .top {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  align-self: start;
+}
+.monthly-pass-container .top h1 {
+  font-family: "Orbitron";
+  font-size: 22px;
+  color: var(--tertiary-2-color);
+}
+.daily-pass-container .top h1 {
+  font-size: 17px;
+  text-align: start;
+  font-family: "Orbitron";
+}
+.daily-pass-container .top p,
+.monthly-pass-container .top p {
+  font-size: 24px;
+  font-weight: 700;
+}
+.daily-pass-container .top span,
+.monthly-pass-container .top span {
+  font-size: 16px;
+  font-weight: 400;
+  color: #000014a8;
+}
+.monthly-pass-container .top span {
+  color: #9b9b9b;
+}
+.daily-pass-container .centre,
+.monthly-pass-container .centre {
+  display: flex;
+  flex-direction: column;
+  row-gap: 12px;
+}
+.daily-pass-container .centre button,
+.monthly-pass-container .centre button {
+  width: 100%;
+  margin-right: 80px;
+  border: none;
+  border-radius: 12px;
+}
+.monthly-pass-container .cta-button {
+  background-color: #cae5ff;
+  background-image: linear-gradient(62deg, #e2f1ff 0%, #f0e0ff 100%);
+  color: var(--primary-color);
+  padding: 13px 12px;
+}
+.cta-button {
+  background-color: var(--primary-color);
+  color: var(--secondary-color);
+  padding: 13px 12px;
+  box-shadow: -1px 1px 3px #0000141d;
+}
+.chat--button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  column-gap: 3px;
+  padding: 8px 12px;
+  background-color: var(--primary-color);
+  color: #cae5ff;
+  box-shadow: 1px -1px 6px #4876ff70;
+}
+.chat-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  column-gap: 3px;
+  box-shadow: -1px 1px 3px #0000141d;
+  padding: 8px 12px;
+  background-color: #cae5ff;
+  background-image: linear-gradient(62deg, #e2f1ff 0%, #f0e0ff 100%);
+}
+.chat-button img,
+.chat--button img {
+  width: 20px;
+}
 
-
+.daily-pass-container .bottom,
+.monthly-pass-container .bottom {
+  display: flex;
+  flex-direction: column;
+  align-self: start;
+}
+.daily-pass-container .bottom h1,
+.monthly-pass-container .bottom h1 {
+  font-size: 15px;
+  text-align: start;
+  margin-bottom: 5px;
+  font-weight: 300;
+}
+.daily-pass-container .bottom p,
+.monthly-pass-container .bottom p {
+  margin-top: 4px;
+  display: flex;
+  align-items: center;
+  column-gap: 10px;
+}
