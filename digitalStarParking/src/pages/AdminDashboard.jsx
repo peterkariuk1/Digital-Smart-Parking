@@ -1,4 +1,3 @@
-// src/components/AdminDashboard.jsx
 import { useEffect, useState } from "react";
 import { collection, getDocs } from "firebase/firestore";
 import { db } from "../firebase.js";
@@ -38,7 +37,10 @@ const AdminDashboard = () => {
   };
   return (
     <div className="admin-dashboard">
-      <h2>Admin Dashboard:<br/> User Subscriptions</h2>
+      <h2>
+        Admin Dashboard:
+        <br /> User Subscriptions
+      </h2>
       {subscriptions.length === 0 ? (
         <p>No subscriptions found.</p>
       ) : (
@@ -71,11 +73,9 @@ const AdminDashboard = () => {
                   <td>{timeRemaining}</td>
                   <td>{sub.status}</td>
                   <td>
-                    
-                      <button onClick={() => sendReminder(sub)}>
-                        Send Reminder
-                      </button>
-                   
+                    <button onClick={() => sendReminder(sub)}>
+                      Send Reminder
+                    </button>
                   </td>
                 </tr>
               );

@@ -262,6 +262,7 @@ nav .right {
 .pricing-plans-container {
   display: flex;
   justify-content: center;
+  position: relative;
   column-gap: 20px;
   padding-bottom: 50px;
 }
@@ -446,4 +447,86 @@ nav .right {
 .admin-dashboard button:hover {
   transform: scale(1.08);
   box-shadow: 0px 3px 3px rgb(109, 109, 109);
+}
+/* payment-dialog-styles*/
+
+.payment-dialog-overlay {
+  position: absolute;
+  background-color: var(--secondary-color);
+  top: 60px;
+  padding: 40px 80px;
+  border-radius: 28px;
+  border: 1px solid #130f1f;
+  box-shadow: 2px 1px 4px #0000141d;
+}
+.dialog-buttons {
+  margin-top: 30px;
+  display: flex;
+  gap: 20px;
+}
+.dialog-buttons :nth-child(1) {
+  background-color: rgb(0, 175, 0);
+  color: var(--secondary-color);
+  padding: 10px 35px;
+  border: none;
+  border-radius: 18px;
+}
+.dialog-buttons :nth-child(2) {
+  background-color: var(--secondary-color);
+  padding: 10px 25px;
+  border: 1px solid #130f1f;
+  border-radius: 18px;
+}
+.payment-dialog em {
+  color: red;
+}
+.payment-dialog input {
+  color: var(--primary-color);
+  margin-left: 20px;
+  width: 80px;
+  padding: 3px;
+  font-size: 26px;
+}
+.confirm-message {
+  color: rgb(1, 193, 1);
+  text-align: center;
+  font-weight: 700;
+  font-size: 26px;
+}
+.user-subscription {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /* justify-content: center; */
+}
+
+/* STYLES FOR THE TESTIMONIALS */
+
+.test-container {
+  background-color: var(--primary-color);
+  padding-top: 30px;
+}
+.test-container h1 {
+  text-align: center;
+  margin-top: 0px;
+  width: 80%;
+  padding-top: 10px;
+  font-size: 45px;
+  margin-right: 100px;
+  font-family: Orbitron;
+  font-weight: 800;
+  background: linear-gradient(
+    to right,
+    #8f68ff,
+    #fc72ff,
+    #8258fe,
+    #4876ff,
+    #8f68ff,
+    #8f68ff
+  );
+  background-size: 200%;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: 16.2s alternate-reverse infinite gradientSlide;
 }
